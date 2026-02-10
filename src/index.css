@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html.dark {
+  background-color: #020617;
+}
+
+html:not(.dark) {
+  background-color: #e2e8f0;
+}
+
+body {
+  background: transparent;
+}

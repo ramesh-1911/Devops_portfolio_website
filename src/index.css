@@ -13,3 +13,7 @@ html:not(.dark) {
 body {
   background: transparent;
 }
+
+html {
+  scroll-behavior: smooth;
+}

@@ -32,7 +32,7 @@ function Hero() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               href="#projects"
-              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg"
+              className="bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-7 py-3 rounded-xl font-medium shadow-lg hover:shadow-blue-500/30 transition duration-300"
             >
               View Projects
             </motion.a>
@@ -41,7 +41,7 @@ function Hero() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               href="/resume.pdf"
-              className="border border-blue-500 px-6 py-3 rounded-lg"
+              className="border border-blue-500 px-7 py-3 rounded-xl hover:bg-blue-500 hover:text-white transition duration-300"
             >
               Download Resume
             </motion.a>

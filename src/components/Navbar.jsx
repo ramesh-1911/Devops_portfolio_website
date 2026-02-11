@@ -15,7 +15,7 @@ function Navbar() {
   if (!mounted) return null
 
   return (
-    <nav className="fixed top-0 w-full bg-slate-50 dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 z-50">
+    <nav className="fixed top-0 w-full bg-white/70 dark:bg-slate-900/70 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 z-50">
 
       <div className="max-w-7xl mx-auto px-5 py-4 flex justify-between items-center">
 
@@ -78,7 +78,7 @@ function Navbar() {
 
       {/* Mobile Menu Drawer */}
       {menuOpen && (
-        <div className="md:hidden bg-slate-50 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
+        <div className="md:hidden bg-white/70 dark:bg-slate-900/70 backdrop-blur-md border-t border-slate-200 dark:border-slate-800">
 
           <div className="flex flex-col items-center gap-4 py-6">
 

@@ -7,7 +7,15 @@ const skillVariants = {
 
 function Skills() {
   return (
-    <section id="skills" className="py-20">
+    <motion.section
+  id="skills"
+  className="py-20"
+  initial={{ opacity: 0, y: 40 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6 }}
+  viewport={{ once: true }}
+>
+
 
       <div className="max-w-6xl mx-auto px-6">
 
@@ -55,7 +63,7 @@ function Skills() {
 
       </div>
 
-    </section>
+    </motion.section>
   )
 }
 

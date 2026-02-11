@@ -26,7 +26,15 @@ const projects = [
 
 function Projects() {
   return (
-    <section id="projects" className="py-20">
+    <motion.section
+  id="projects"
+  className="py-20"
+  initial={{ opacity: 0, y: 40 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6 }}
+  viewport={{ once: true }}
+>
+
 
       <div className="max-w-7xl mx-auto px-6">
 
@@ -93,7 +101,7 @@ function Projects() {
 
       </div>
 
-    </section>
+    </motion.section>
   )
 }
 

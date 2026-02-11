@@ -34,7 +34,7 @@ function Skills() {
               key={index}
               variants={skillVariants}
               whileHover={{ scale: 1.05 }}
-              className="bg-white dark:bg-slate-900 p-6 rounded-xl shadow-md dark:shadow-none"
+              className="bg-white dark:bg-slate-900 p-6 rounded-xl shadow-lg hover:shadow-blue-400/20 transition duration-300 dark:shadow-none"
             >
 
               <h3 className="font-semibold mb-3">

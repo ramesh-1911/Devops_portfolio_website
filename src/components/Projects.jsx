@@ -42,7 +42,7 @@ function Projects() {
               key={index}
               whileHover={{ y: -6 }}
               className="bg-white dark:bg-slate-900
-                rounded-xl shadow-lg overflow-hidden"
+                rounded-xl shadow-xl hover:shadow-blue-500/20 transition duration-300 overflow-hidden"
             >
 
               <img

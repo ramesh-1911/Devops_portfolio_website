@@ -1,59 +1,89 @@
 import { motion } from "framer-motion"
 
+const projects = [
+  {
+    title: "AWS CI/CD Pipeline",
+    desc: "Automated CI/CD pipeline using Jenkins, Docker, and AWS EC2 with monitoring integration.",
+    tech: ["AWS", "Jenkins", "Docker", "Ansible", "CI/CD", "Monitoring", "Maven", "GitHub", "Linux", "Tomcat"],
+    image: "/projects/Apache Tomcat Home page.png",
+    github: "https://github.com/ramesh-1911/aws-ci-cd-pipeline-jenkins-ansible.git",
+  },
+  {
+    title: "Terraform AWS Infrastructure",
+    desc: "Provisioned AWS VPC, EC2, IAM using Terraform with remote state locking.",
+    tech: ["Terraform", "AWS", "IaC",  "Cloud", "RDS", "S3", "VPC", "EC2", "IAM", "Bastion Host"],
+    image: "/projects/01-terraform-apply-success + terraform-outputs.png.png",
+    github: "https://github.com/ramesh-1911/terraform-aws-ha-3tier-architecture.git",
+  },
+  {
+    title: "Monitoring Stack",
+    desc: "Prometheus + Grafana monitoring setup with alerting and dashboards.",
+    tech: ["Prometheus", "Grafana", "Linux", "Monitoring", "Alerting", "Node Exporter", "Cloud"],
+    image: "/projects/Grafana Dashboard.png",
+    github: "https://github.com/ramesh-1911/aws-ci-cd-pipeline-jenkins-ansible.git",
+  }
+]
+
 function Projects() {
-
-  const projects = [
-    {
-      title: "AWS DevOps CI/CD Automation Platform",
-      desc: "Built Jenkins multibranch pipeline integrated with GitHub webhooks. Automated deployments using Ansible and implemented monitoring using Prometheus and Grafana.",
-      stack: "AWS EC2, Jenkins, Docker, Ansible, Maven, Tomcat, Prometheus, Grafana"
-    },
-    {
-      title: "Terraform AWS Infrastructure Automation",
-      desc: "Automated AWS infrastructure provisioning using Terraform. Implemented remote backend with S3 and DynamoDB state locking.",
-      stack: "Terraform, AWS VPC, EC2, S3, DynamoDB"
-    },
-    {
-      title: "Monitoring Stack Deployment",
-      desc: "Deployed Prometheus and Grafana on Linux servers and created custom dashboards for infrastructure monitoring.",
-      stack: "Prometheus, Grafana, Linux, Node Exporter"
-    }
-  ]
-
   return (
-    <section id="projects" className="py-20 bg-transparent">
+    <section id="projects" className="py-20">
 
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-6">
 
-        <h2 className="text-3xl font-bold mb-10 text-blue-500">
-          Projects
+        <h2 className="text-3xl font-bold mb-12 text-blue-500">
+          Featured Projects
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
           {projects.map((project, index) => (
 
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4 }}
-              whileHover={{ scale: 1.03 }}
-              className="bg-white dark:bg-slate-900 p-6 rounded-xl shadow-md dark:shadow-none"
+              whileHover={{ y: -6 }}
+              className="bg-white dark:bg-slate-900
+                rounded-xl shadow-lg overflow-hidden"
             >
 
-              <h3 className="text-xl font-semibold mb-3">
-                {project.title}
-              </h3>
+              <img
+                src={project.image}
+                alt={project.title}
+                className="h-48 w-full object-cover"
+              />
 
-              <p className="text-slate-600 dark:text-slate-400 mb-4">
-                {project.desc}
-              </p>
+              <div className="p-6">
 
-              <p className="text-sm text-slate-500">
-                Tech Stack: {project.stack}
-              </p>
+                <h3 className="text-xl font-semibold mb-2">
+                  {project.title}
+                </h3>
+
+                <p className="text-slate-600 dark:text-slate-400 mb-4">
+                  {project.desc}
+                </p>
+
+                {/* Tech Tags */}
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {project.tech.map((tech, i) => (
+                    <span
+                      key={i}
+                      className="text-xs px-2 py-1
+                        bg-blue-100 dark:bg-blue-900
+                        rounded"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+
+                <a
+                  href={project.github}
+                  target="_blank"
+                  className="text-blue-500 hover:underline"
+                >
+                  View GitHub →
+                </a>
+
+              </div>
 
             </motion.div>
 

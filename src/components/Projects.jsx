@@ -12,7 +12,7 @@ const projects = [
     title: "Terraform AWS Infrastructure",
     desc: "Provisioned AWS VPC, EC2, IAM using Terraform with remote state locking.",
     tech: ["Terraform", "AWS", "IaC",  "Cloud", "RDS", "S3", "VPC", "EC2", "IAM", "Bastion Host"],
-    image: "/projects/01-terraform-apply-success + terraform-outputs.png.png",
+    image: "/projects/Terraform.png",
     github: "https://github.com/ramesh-1911/terraform-aws-ha-3tier-architecture.git",
   },
   {
@@ -56,7 +56,7 @@ function Projects() {
               <img
                 src={project.image}
                 alt={project.title}
-                className="h-48 w-full object-cover"
+                className="h-48 w-full object-cover transition duration-300 hover:brightness-110"
               />
 
               <div className="p-6">

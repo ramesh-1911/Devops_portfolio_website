@@ -12,8 +12,8 @@ function Hero() {
         {/* LEFT TEXT */}
         <motion.div
           initial={{ opacity: 0, x: -40 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.7 }}
+          animate={{ opacity: 1, scale: 1, y: [0, -8, 0] }}
+          transition={{ duration: 6, repeat: Infinity }}
         >
 
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
